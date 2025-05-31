@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOREAN WAVE TRIPS | Путешествия по Южной Корее</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #ff3b3b;
+        --secondary: #3b82f6;
+        --bg: #fff5f5;
+        --text: #333;
+        --light: #fff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+      }
+
+      /* Шапка */
+      header {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url('https://images.unsplash.com/photo-1538485399081-7c8970b433d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--light);
+        padding: 0 20px;
+      }
+
+      .logo {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--primary);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .tagline {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        max-width: 800px;
+      }
+
+      .btn {
+        background-color: var(--primary);
+        color: var(--light);
+        padding: 12px 30px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(255, 59, 59, 0.3);
+      }
+
+      /* Туры */
+      .tours {
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: var(--primary);
+      }
+
+      .tour-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .tour-card {
+        background-color: var(--light);
+        border-radius: 15px;
+        overflow: hidden;
+        width: 350px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+      }
+
+      .tour-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .tour-img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .tour-info {
+        padding: 20px;
+      }
+
+      .tour-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--primary);
+      }
+
+      .tour-desc {
+        margin-bottom: 20px;
+        color: #666;
+      }
+
+      .tour-price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 15px;
+      }
+
+      /* Контакты */
+      .contacts {
+        background-color: var(--secondary);
+        color: var(--light);
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .contact-methods {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+
+      .contact-method {
+        background-color: var(--light);
+        color: var(--secondary);
+        padding: 20px;
+        border-radius: 10px;
+        width: 200px;
+        transition: all 0.3s;
+      }
+
+      .contact-method:hover {
+        transform: scale(1.05);
+      }
+
+      .contact-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      /* Анимации */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s ease-out forwards;
+      }
+
+      /* Адаптив */
+      @media (max-width: 768px) {
+        .logo {
+          font-size: 2rem;
+        }
+        .tagline {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header>
+      <h1 class="logo fade-in">KOREAN WAVE TRIPS</h1>
+      <p class="tagline fade-in">
+        Недельные туры по Южной Корее с проживанием, транспортом и яркими впечатлениями!
+      </p>
+      <a href="#tours" class="btn fade-in">Выбрать тур</a>
+    </header>
+
+    <!-- Туры -->
+    <section class="tours" id="tours">
+      <h2 class="section-title">Наши туры</h2>
+      <div class="tour-cards">
+        <!-- Тур 1 -->
+        <div class="tour-card fade-in">
+          <img
+            src="https://images.unsplash.com/photo-1536599424071-0b215a388ba7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+            alt="Сеул"
+            class="tour-img"
+          />
+          <div class="tour-info">
+            <h3 class="tour-title">Сеул: 7 дней</h3>
+            <p class="tour-desc">
+              Дворцы Кёнбоккун и Чхангёнгун, район Хондэ, рынок Кванджан, Namsan Tower.
+            </p>
+            <p class="tour-price">От 1200$</p>
+            <a href="#contacts" class="btn" style="background-color: var(--secondary)"
+              >Забронировать</a
+            >
+          </div>
+        </div>
+
+        <!-- Тур 2 -->
+        <div class="tour-card fade-in">
+          <img
+            src="https://images.unsplash.com/photo-1571330735066-03aaa9429d4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+            alt="Бусан"
+            class="tour-img"
+          />
+          <div class="tour-info">
+            <h3 class="tour-title">Сеул + Бусан: 7 дней</h3>
+            <p class="tour-desc">
+              Сеул (3 дня) + Бусан (4 дня): пляжи Хэундэ, рынок Чагальчхи, мост Гванан.
+            </p>
+            <p class="tour-price">От 1500$</p>
+            <a href="#contacts" class="btn" style="background-color: var(--secondary)"
+              >Забронировать</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+      <h2 class="section-title" style="color: var(--light)">Как забронировать?</h2>
+      <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px">
+        Оставьте заявку через WhatsApp или онлайн-чат. Предоплата 30%, остальное — после
+        путешествия!
+      </p>
+      <div class="contact-methods">
+        <div class="contact-method fade-in">
+          <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+          <h3>WhatsApp</h3>
+          <p>+7 (123) 456-7890</p>
+        </div>
+        <div class="contact-method fade-in">
+          <div class="contact-icon"><i class="fas fa-comment-dots"></i></div>
+          <h3>Онлайн-чат</h3>
+          <p>Нажмите на иконку в углу</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Чат-виджет -->
+    <div class="chat-widget" style="position: fixed; bottom: 20px; right: 20px">
+      <button class="btn" style="border-radius: 50%; width: 60px; height: 60px; font-size: 1.5rem">
+        <i class="fas fa-comment"></i>
+      </button>
+    </div>
+
+    <script>
+      // Анимация появления элементов при скролле
+      document.addEventListener('DOMContentLoaded', () => {
+        const fadeElements = document.querySelectorAll('.fade-in')
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = 1
+                entry.target.style.transform = 'translateY(0)'
+              }
+            })
+          },
+          { threshold: 0.1 }
+        )
+
+        fadeElements.forEach((el) => {
+          el.style.opacity = 0
+          el.style.transform = 'translateY(20px)'
+          el.style.transition = 'all 0.6s ease-out'
+          observer.observe(el)
+        })
+
+        // Чат
+        const chatBtn = document.querySelector('.chat-widget button')
+        chatBtn.addEventListener('click', () => {
+          alert('Чат скоро появится! Пока пишите в WhatsApp :)')
+        })
+      })
+    </script>
+  </body>
+</html>
